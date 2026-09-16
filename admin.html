@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Yönetim paneli</title>
+  <meta name="theme-color" content="#2B3033">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <script type="module" src="assets/js/admin.js"></script>
+</head>
+<body>
+  <div class="giris" id="giris" hidden>
+    <form class="giris-kart" id="girisForm" novalidate>
+      <span class="marka-isaret" aria-hidden="true"><i></i><i></i><i></i></span>
+      <h1 class="display">Yönetim paneli</h1>
+      <p class="giris-alt">Ürünleri, katalogları ve iletişim bilgilerini buradan yönetirsiniz.</p>
+      <label class="alan">
+        <span>Şifre</span>
+        <input id="sifre" type="password" autocomplete="current-password" required>
+      </label>
+      <p class="form-hata" id="girisHata" role="alert"></p>
+      <button class="btn btn-sari" type="submit" id="girisDugme">Giriş yap</button>
+      <a class="giris-don" href="index.html">Siteye dön</a>
+    </form>
+  </div>
+
+  <div class="panel" id="panel" hidden>
+    <header class="p-ust">
+      <div class="p-ust-ic">
+        <span class="p-marka"><span class="marka-isaret" aria-hidden="true"><i></i><i></i><i></i></span><span id="pMarkaAd">Yönetim</span></span>
+        <a class="p-ust-link" href="index.html" target="_blank" rel="noopener" id="siteyiAc"></a>
+        <button class="p-ust-link" type="button" id="cikis"></button>
+      </div>
+      <nav class="p-sekmeler" id="sekmeler" aria-label="Panel bölümleri"></nav>
+    </header>
+    <main class="p-icerik" id="icerik"></main>
+  </div>
+
+  <dialog class="editor" id="editor"></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

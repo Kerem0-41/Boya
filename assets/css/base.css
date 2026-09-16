@@ -1,0 +1,184 @@
+/* Renkler: RAL 7016 antrasit gri + RAL 1003 sinyal sarısı. Site rengini değiştirmek için --sari'yi değiştir. */
+:root {
+  --antrasit: #383e42;
+  --antrasit-koyu: #2b3033;
+  --antrasit-acik: #4a5156;
+  --sari: #f9a800;
+  --sari-koyu: #dd9500;
+  --beton: #e6e8e7;
+  --beton-acik: #f2f3f2;
+  --beyaz: #ffffff;
+  --metin: #23282b;
+  --soluk: #5a6267;
+  --kenar: #cdd2d4;
+  --soluk-koyu: #aab2b6;
+  --kirmizi: #b3261e;
+  --yesil: #1e7a46;
+
+  --font: "Archivo", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --kap: 1200px;
+  --r: 6px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 84px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--metin);
+  background: var(--beton);
+  font-variant-numeric: tabular-nums;
+}
+
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+:focus-visible {
+  outline: 3px solid var(--antrasit-koyu);
+  outline-offset: 2px;
+}
+
+.kap {
+  width: 100%;
+  max-width: var(--kap);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 32px);
+}
+
+.display {
+  font-weight: 800;
+  font-stretch: 118%;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.ikon {
+  width: 1.2em;
+  height: 1.2em;
+  flex: none;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  min-height: 48px;
+  padding: 0 1.25rem;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  font-weight: 700;
+  font-stretch: 106%;
+  font-size: 1rem;
+  line-height: 1.1;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.btn-sari {
+  background: var(--sari);
+  color: var(--antrasit-koyu);
+}
+
+.btn-sari:hover {
+  background: var(--sari-koyu);
+}
+
+.btn-koyu {
+  background: var(--antrasit);
+  color: var(--beyaz);
+}
+
+.btn-koyu:hover {
+  background: var(--antrasit-koyu);
+}
+
+.btn-cizgi {
+  border-color: currentColor;
+  background: transparent;
+}
+
+.btn-cizgi:hover {
+  background: rgb(127 127 127 / 0.12);
+}
+
+.btn-kucuk {
+  min-height: 38px;
+  padding: 0 0.85rem;
+  font-size: 0.9375rem;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.atla {
+  position: absolute;
+  left: 8px;
+  top: -60px;
+  z-index: 100;
+  padding: 10px 14px;
+  background: var(--sari);
+  color: var(--antrasit-koyu);
+  font-weight: 700;
+}
+
+.atla:focus {
+  top: 8px;
+}

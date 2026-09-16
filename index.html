@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boyacı | Boya ve boya makineleri</title>
+  <meta name="description" content="İç ve dış cephe boyaları, sanayi boyaları, airless boya makineleri, kataloglar ve yaptığımız işler.">
+  <meta name="theme-color" content="#2B3033">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script type="module" src="assets/js/site.js"></script>
+</head>
+<body>
+  <a class="atla" href="#icerik">İçeriğe geç</a>
+
+  <header class="ust">
+    <div class="kap ust-ic">
+      <a class="marka" href="#" id="marka">
+        <span class="marka-isaret" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="marka-ad" id="markaAd">Boyacı</span>
+      </a>
+      <nav class="menu" id="menu" aria-label="Ana menü">
+        <a href="#boyalar" data-bolum="boyalar">Boyalar</a>
+        <a href="#makineler" data-bolum="makineler">Makineler</a>
+        <a href="#kataloglar" data-bolum="kataloglar">Kataloglar</a>
+        <a href="#isler" data-bolum="isler">Yaptığımız işler</a>
+        <a href="#hakkimizda" data-bolum="hakkimizda">Hakkımızda</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+      <a class="btn btn-sari ust-ara" id="ustAra" href="#iletisim" hidden></a>
+      <button class="menu-dugme" id="menuDugme" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menüyü aç"></button>
+    </div>
+  </header>
+
+  <main id="icerik">
+    <section class="kahraman">
+      <div class="kap kahraman-ic">
+        <div class="kahraman-metin">
+          <h1 class="display kahraman-baslik" id="heroBaslik">Boyası da makinesi de burada.</h1>
+          <p class="kahraman-yazi" id="heroYazi">İç ve dış cephe boyaları, sanayi boyaları, airless boya makineleri ve yedek parçalar. Teknik özellikleri inceleyin, kataloğu indirin, fiyat için bize yazın.</p>
+          <div class="kahraman-eylem">
+            <a class="btn btn-sari" href="#boyalar" id="heroUrunler">Ürünleri incele</a>
+            <a class="btn btn-cizgi" href="#iletisim" id="heroYaz">Bize ulaşın</a>
+          </div>
+          <ul class="kahraman-bilgi" id="heroBilgi"></ul>
+        </div>
+
+        <div class="kartela" aria-hidden="true">
+          <div class="serit" style="--renk:#F1ECE1;--yazi:#383E42;--i:0"><b>RAL 9010</b><span>Saf beyaz</span></div>
+          <div class="serit" style="--renk:#E6D2B5;--yazi:#383E42;--i:1"><b>RAL 1015</b><span>Açık fildişi</span></div>
+          <div class="serit" style="--renk:#CBD0CC;--yazi:#383E42;--i:2"><b>RAL 7035</b><span>Açık gri</span></div>
+          <div class="serit" style="--renk:#114232;--yazi:#E6E8E7;--i:3"><b>RAL 6005</b><span>Yosun yeşili</span></div>
+          <div class="serit" style="--renk:#0E518D;--yazi:#F1ECE1;--i:4"><b>RAL 5010</b><span>Gentiyan mavisi</span></div>
+          <div class="serit" style="--renk:#C1121C;--yazi:#F1ECE1;--i:5"><b>RAL 3020</b><span>Trafik kırmızısı</span></div>
+          <div class="serit" style="--renk:#383E42;--yazi:#E6E8E7;--i:6"><b>RAL 7016</b><span>Antrasit gri</span></div>
+          <div class="serit" style="--renk:#F9A800;--yazi:#2B3033;--i:7"><b>RAL 1003</b><span>Sinyal sarısı</span></div>
+          <span class="kartela-percin"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="hizmetler" id="hizmetler" hidden>
+      <div class="kap"><ul class="hizmet-liste" id="hizmetListe"></ul></div>
+    </section>
+
+    <p class="yukleniyor kap" id="durum" role="status">Ürünler yükleniyor…</p>
+
+    <section class="bolum" id="boyalar" hidden>
+      <div class="kap">
+        <div class="bolum-bas">
+          <h2 class="display bolum-baslik">Boyalar</h2>
+          <p class="bolum-aciklama">Ürüne tıklayın; ambalaj, sarfiyat ve kuruma gibi teknik özellikleri görün.</p>
+        </div>
+        <div class="filtre" id="boyaFiltre" role="group" aria-label="Boya kategorileri"></div>
+        <div class="urun-izgara" id="boyaListe"></div>
+      </div>
+    </section>
+
+    <section class="bolum bolum-beyaz" id="makineler" hidden>
+      <div class="kap">
+        <div class="bolum-bas">
+          <h2 class="display bolum-baslik">Makineler</h2>
+          <p class="bolum-aciklama">Boya makineleri, pompalar ve tabancalar. Teknik değerler ürün kartında.</p>
+        </div>
+        <div class="filtre" id="makineFiltre" role="group" aria-label="Makine kategorileri"></div>
+        <div class="makine-liste" id="makineListe"></div>
+      </div>
+    </section>
+
+    <section class="bolum" id="kataloglar" hidden>
+      <div class="kap">
+        <div class="bolum-bas">
+          <h2 class="display bolum-baslik">Kataloglar</h2>
+          <p class="bolum-aciklama">PDF kataloglarını açıp telefonunuza veya bilgisayarınıza indirebilirsiniz.</p>
+        </div>
+        <ul class="katalog-liste" id="katalogListe"></ul>
+      </div>
+    </section>
+
+    <section class="bolum bolum-koyu" id="isler" hidden>
+      <div class="kap">
+        <div class="bolum-bas">
+          <h2 class="display bolum-baslik">Yaptığımız işler</h2>
+          <p class="bolum-aciklama">Uyguladığımız boya işlerinden fotoğraf ve videolar.</p>
+        </div>
+        <ul class="is-izgara" id="isListe"></ul>
+      </div>
+    </section>
+
+    <section class="bolum bolum-beyaz" id="hakkimizda" hidden>
+      <div class="kap hakkimizda-ic">
+        <h2 class="display bolum-baslik">Hakkımızda</h2>
+        <div>
+          <div class="metin" id="hakkimizdaMetin"></div>
+          <div class="markalar" id="markalar" hidden>
+            <h3>Çalıştığımız markalar</h3>
+            <ul id="markaListe"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bolum iletisim" id="iletisim">
+      <div class="kap iletisim-ic">
+        <div>
+          <h2 class="display bolum-baslik">İletişim</h2>
+          <a class="iletisim-tel display" id="iletisimTel" hidden></a>
+          <div class="iletisim-eylem" id="iletisimEylem"></div>
+          <dl class="iletisim-liste" id="iletisimListe"></dl>
+        </div>
+        <div class="harita" id="harita" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="alt">
+    <div class="kap alt-ic">
+      <p id="altYazi">© Boyacı</p>
+      <a href="admin.html" class="alt-yonetim">Yönetim</a>
+    </div>
+  </footer>
+
+  <div class="eylem-cubugu" id="eylemCubugu" hidden></div>
+
+  <dialog class="urun-dialog" id="urunDialog" aria-labelledby="urunDialogBaslik"></dialog>
+  <dialog class="isik-kutusu" id="isikKutusu" aria-label="Yaptığımız işler"></dialog>
+
+  <noscript><p class="kap">Ürünleri görmek için tarayıcınızda JavaScript açık olmalı.</p></noscript>
+</body>
+</html>
