@@ -140,16 +140,16 @@
     display: none;
   }
 
+  /* Telefonda menü tüm ekranı kaplar */
   .menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
     flex-direction: column;
     gap: 0;
-    padding: 0.5rem clamp(16px, 4vw, 32px) 1rem;
+    padding: calc(68px + 1rem) clamp(16px, 4vw, 32px) calc(1.5rem + env(safe-area-inset-bottom));
+    overflow-y: auto;
     background: var(--antrasit-koyu);
-    border-bottom: 3px solid var(--sari);
     display: none;
   }
 
@@ -157,10 +157,28 @@
     display: flex;
   }
 
+  .marka,
+  .menu-dugme {
+    position: relative;
+    z-index: 2;
+  }
+
+  body:has(.menu.acik) {
+    overflow: hidden;
+  }
+
   .menu a {
-    padding-block: 0.8rem;
-    border-bottom: 1px solid rgb(255 255 255 / 0.08);
-    font-size: 1.05rem;
+    padding-block: 1rem;
+    border-bottom: 1px solid rgb(255 255 255 / 0.1);
+    font-size: 1.6rem;
+    font-weight: 800;
+    font-stretch: 112%;
+    color: var(--beyaz);
+  }
+
+  .menu a:last-child {
+    color: var(--sari);
+    border-bottom: 0;
   }
 
   .menu a::after {
